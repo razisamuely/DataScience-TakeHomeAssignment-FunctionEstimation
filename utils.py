@@ -74,7 +74,7 @@ def find_y_value_with_plot(x: float, func, epsilon: float, lower_bound: float = 
     float: the value of y that, when passed to func(x,y), produces a value close to x within epsilon
     """
     x_space = np.arange(lower_bound, upper_bound, epsilon)
-    y_space = np.arange(lower_bound, upper_bound, epsilon)
+    y_space = [func(x=i) for i in x_space]
 
     y = func(x=x)
 
@@ -98,7 +98,6 @@ def find_y_value_with_plot(x: float, func, epsilon: float, lower_bound: float = 
             if mid_point - lower_bound < epsilon:
                 return mid_point
             upper_bound = mid_point
-
 
 def create_gif_of_MonteCarlo_simulation(start, end, func, samples=[50, 100, 300, 700, 800, 900]):
 
