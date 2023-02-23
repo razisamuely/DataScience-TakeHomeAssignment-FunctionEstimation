@@ -15,7 +15,7 @@ For detailed code and functionality pleas see `main.py` and `utils.py`
 
 There is an unknown continuous function, denoted by $x → y$, such that x belongs to the interval $[0,1]$ and y belongs to the interval $[0,1]$. 
 
-There is also a function called `check_if_below which`, for each combination of x and y, returns False if the point is above the function and True if it's below the function. 
+There is also a function called `check_if_below`, which for each combination of x and y, returns False if the point is above the function and True if it's below the function. 
 
 Your task is to estimate the area under this function. 
 
@@ -62,12 +62,12 @@ By conducting multiple experiments with the same number of samples and averaging
 we can reduce the impact of any individual experiment that may have deviated from the expected value. 
 This can provide a more reliable estimate of the proportion of points that fall under the function.
 
-### Follow-up question:
+### Follow-up question (1):
 
 After presenting the Monte Carlo simulation, a follow-up question was asked: 
 "Can we make any statements about the estimated area and the real value"
 
-### Follow-up Answer:
+### Follow-up Answer (1):
 Yes, after presenting the Monte Carlo simulation, we can make statements about the estimated area and the real value.
 
 We can use statistical methods to build a confidence interval for the proportion of points that fall under the function, 
@@ -82,7 +82,7 @@ function being estimated. In general, a larger number of samples will result in 
 confidence interval and a more accurate estimate of the true area.
 
 
-Solution 2 - Binary search
+Solution (2) - Binary search
 
 With stochastic methods, such as the `Monte Carlo simulation` mentioned above, 
 the estimated area changes for different iterations with the same predefined parameters. 
