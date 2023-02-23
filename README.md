@@ -1,6 +1,8 @@
 # DataScience-TakeHomeAssignment-FunctionEstimation
+
+
 <p align="center">
-    <img src="https://raw.githubusercontent.com/razisamuely/DataScience-TakeHomeAssignment-FunctionEstimation/main/data/random_continuse_function_detect_below_abov_points.gif"  width="300" height="230">
+    <img src="https://raw.githubusercontent.com/razisamuely/DataScience-TakeHomeAssignment-FunctionEstimation/main/data/binary_search_on_fx_%3D_x_2.gif"  width="300" height="230">
 </p>
 
 The purpose of this project is to address several questions from the 
