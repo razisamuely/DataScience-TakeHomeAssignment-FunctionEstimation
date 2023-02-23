@@ -28,7 +28,7 @@ However, it's possible for the function to be any other continuous function, suc
 </p>
 
 
-# Solutio1 - Monte carlo simulation
+# Solution (1) - Monte Carlo simulation
 
 The maximum area under the unknown function is one, which allows us to use sampling to estimate the proportion of points that evaluate to True.
 The following steps can be taken:
@@ -127,4 +127,4 @@ What is the complexity of the above ?
 ### Follow-up Answer:
 1. Each iteration the search rang reduced by 0.5 (first (0,1) then (0.5,1) or (0,0.5) etc, so after n iteration, the the search range is $0.5^n$
 2. Then stop rule is continue search till the search range is smaller then $\epsilon$
-3. So `0.5^n >= eps` ==> `n = log_{0.5}(eps)`
+3. So $0.5^n >= \epsilon \rightarrow n = log_{0.5}(\epsilon)$
