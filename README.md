@@ -128,3 +128,22 @@ What is the complexity of the above ?
 1. Each iteration the search rang reduced by 0.5 (first (0,1) then (0.5,1) or (0,0.5) etc, so after n iteration, the the search range is $0.5^n$
 2. Then stop rule is continue search till the search range is smaller then $\epsilon$
 3. So $0.5^n >= \epsilon \rightarrow n = log_{0.5}(\epsilon)$
+
+Summary
+In this section, we have discussed two techniques for classic function estimation: deterministic and stochastic. 
+Deterministic methods involve mathematical equations that directly relate input variables to output variables, 
+allowing for precise and exact estimates of a function's behavior. However, deterministic methods may not work 
+well for complex functions or data sets with a high degree of variability.
+On the other hand, stochastic methods rely on generating random samples of input variables and using them to estimate 
+the function's behavior. One popular example of stochastic methods is the Monte Carlo simulation. 
+While stochastic methods may not provide exact estimates, they can be useful for complex functions or data sets 
+with high variability, as they account for uncertainties in the data.
+Function estimation is a crucial part of the data science world, as it is used in a wide range of applications such 
+as churn analysis, animal picture recognition, signal behavior, and more. Understanding the main concepts of function 
+estimation is essential before diving into advanced techniques. It is also important to note that choosing the right 
+method depends on the problem at hand, and one method may not work well for all situations. A data scientist should 
+have a good understanding of both deterministic and stochastic methods and when to apply each one to achieve the 
+best results.
+
+Code Structure
+Please note that the code for this project is not written in classes as is typically done. Instead, the code is organized in a procedural manner for simplicity and ease of understanding.
