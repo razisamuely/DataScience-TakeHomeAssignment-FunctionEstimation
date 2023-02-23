@@ -1,6 +1,9 @@
 # DataScience-TakeHomeAssignment-FunctionEstimation
-The following project aim to solve some question of DataScience-TakeHomeAssignment-FunctionEstimation 
-whcich i get as part of datascience reqruting process.
+The purpose of this project is to address several questions from the 
+DataScience-TakeHomeAssignment-FunctionEstimation 
+that I received as part of the data science recruitment process.
+
+For detailed code and functionality pleas see `main.py` and `utils.py`
 
 ## Question 
 
@@ -13,7 +16,7 @@ Your task is to estimate the area under this function.
 For example, if the function is $f(x) = x$, the points (0.1,0.2), (0.1,0.8), and (0.6,0.8) would have a value of 0, while (0.1,0.05), (0.1,0.02), and (0.6,0.1) would have a value of 1.
 
 
-#### Showing example of different fucntion
+#### Example for different functions
 
 **Note**: The following functions are of the form $f(x) = x^l$, where $l$ changes between each iteration. 
 However, it's possible for the function to be any other continuous function, such as $f(x) = 0.5$ or $f(x) = sin(x)$, etc.
@@ -75,9 +78,10 @@ confidence interval and a more accurate estimate of the true area.
 
 Solution 2 - Binary search
 
-If we want the estimated area to change for different iterations with the same 
-predefined parameters, we would need to use a stochastic method such as the 
-above `Monte Carlo simulation`, which involves generating random samples to estimate the area.
+With stochastic methods, such as the `Monte Carlo simulation` mentioned above, 
+the estimated area changes for different iterations with the same predefined parameters. 
+This is because the process involves generating random samples to estimate the area.
+
 
 However, if we want to use determenistic method as `binary search` to find the y values for each x that are close 
 enough to the real value, we can do so by defining a function that takes a value of x as input and returns the 
@@ -110,7 +114,7 @@ point (x, midpoint) falls below the unknown function. If it does, we update the
 lower bound of the interval to the midpoint; otherwise, we update the upper bound. 
 We continue this process until the interval is narrow enough to satisfy the desired level 
 of precision, at which point we return the midpoint as the estimated y value for the given x value.
-Note that this approach assumes that the function is continuous and that the area under the curve exists. 
+**Note**  that this approach assumes that the function is continuous and that the area under the curve exists. 
 If these conditions do not hold, the binary search approach may not be appropriate or may not converge 
 to a satisfactory solution.
 
@@ -118,9 +122,9 @@ to a satisfactory solution.
 
 
 ### Follow-up question:
-What is the complexity of the abov binary search ?
+What is the complexity of the above ?
 
 ### Follow-up Answer:
 1. Each iteration the search rang reduced by 0.5 (first (0,1) then (0.5,1) or (0,0.5) etc, so after n iteration, the the search range is $0.5^n$
 2. Then stop rule is continue search till the search range is smaller then $\epsilon$
-3. So $0.5^n >= \epsilon \rightarrow n = log_{0.5}(\epsilon)$
+3. So `0.5^n >= eps` ==> `n = log_{0.5}(eps)`

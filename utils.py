@@ -145,9 +145,27 @@ def create_gif_of_MonteCarlo_simulation(start, end, func, samples=[50, 100, 300,
 
 
 def plot_example_of_different_functions():
+    """
+    Plot the graphs of several functions of the form f(x) = x^j, where j varies from 0.1 to 6 in increments of 0.03.
+    For each function, plot the function curve and scatter plot some example points above or below the curve based
+    on their y value, where blue points indicate y <= f(x) and red points indicate y > f(x).
+
+    Returns:
+        None
+    """
+
     for j in np.arange(0.1, 6, 0.03):
-        # Defininf function f(x) = x
+        # Defining function f(x) = x^j
         def example_function(x: float):
+            """
+            Calculate the output of the function f(x) = x^j.
+
+            Args:
+                x (float): The input value of the function.
+
+            Returns:
+                float: The output value of the function.
+            """
             return x ** j
 
         # Creating data
@@ -155,10 +173,10 @@ def plot_example_of_different_functions():
         y = [example_function(x=i) for i in x]
         df = pd.DataFrame({"x": x, "y": y})
 
-        # Ploting f(x) = x line
+        # Plotting f(x) = x line
         sns.lineplot(data=df, x="x", y="y")
 
-        # Plot below and bove points
+        # Plot below and above points
         points = [(0.1, 0.2), (0.1, 0.8), (0.6, 0.8), (0.5, 0.5), (0.5, 0.5),
                   (0.1, 0.05), (0.1, 0.02), (0.6, 0.1), (0.9, 0.9), (0.95, 0.05)
                   ]
